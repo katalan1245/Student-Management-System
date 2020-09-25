@@ -9,7 +9,8 @@ public class Main {
 			db = new Database("root", "root");
 			Student student = new StudentBuilder().buildStudent();
 			Student s2 = new Student(0, "root", "root", "1999-09-20", "f", "root@gmail.com", "cs", 102, 2021);
-			db.updateStudent(s2);
+			db.printData(0);
+			db.printData(1);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
