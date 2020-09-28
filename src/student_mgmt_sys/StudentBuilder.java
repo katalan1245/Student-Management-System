@@ -1,8 +1,8 @@
 package student_mgmt_sys;
 
-public class StudentBuilder {
+public class StudentBuilder extends Student{
 	
-	private int id = Main.db.getRowCount();
+	private int studentId = Main.db.getRowCount();
 	private String firstName = null;
 	private String lastName = null;
 	private String dateOfBirth = null;
@@ -15,7 +15,7 @@ public class StudentBuilder {
 	public StudentBuilder() { }
 	
 	public Student buildStudent() {
-		return new Student(this.id,
+		return new Student(this.studentId,
 						   this.firstName,
 						   this.lastName,
 						   this.dateOfBirth,
@@ -24,11 +24,6 @@ public class StudentBuilder {
 						   this.profession,
 						   this.credits,
 						   this.graduateYear);
-	}
-	
-	public StudentBuilder id(int id) {
-		this.id = id;
-		return this;
 	}
 	
 	public StudentBuilder firstName(String firstName) {

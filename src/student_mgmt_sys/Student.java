@@ -2,7 +2,7 @@ package student_mgmt_sys;
 
 public class Student {
 	
-	private int id = -1;
+	private int studentId = -1;
 	private String firstName = null;
 	private String lastName = null;
 	private String dateOfBirth = null;
@@ -14,7 +14,7 @@ public class Student {
 	
 	public Student() { }
 
-	public Student(int id,
+	protected Student(int studentId,
 				   String firstName,
 				   String lastName,
 				   String dateOfBirth,
@@ -23,7 +23,7 @@ public class Student {
 				   String profession,
 				   int credits,
 				   int graduateYear) {
-		this.id = id;
+		this.studentId = studentId;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.dateOfBirth = dateOfBirth;
@@ -36,7 +36,7 @@ public class Student {
 
 	public String toSql() {
 		return String.format("%s, \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", \"%s\", %s, %s",
-														   this.id,
+														   this.studentId,
 														   this.firstName,
 														   this.lastName,
 														   this.dateOfBirth,
@@ -48,7 +48,7 @@ public class Student {
 	}
 
 	public int getId() {
-		return this.id;
+		return this.studentId;
 	}
 	
 	public String getFirstName() {
