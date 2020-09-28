@@ -257,12 +257,6 @@ public class Gui {
 				Actions.copySummaryToClipboard(summaryTextPane);
 				System.out.println("GUI>> Summary Copied To Clipboard");
 			}});
-		summaryScroll.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				Actions.copySummaryToClipboard(summaryTextPane);
-				System.out.println("GUI>> Summary Copied To Clipboard");
-			}});
 		summaryScroll.setViewportView(summaryTextPane);
 		summaryTextPane.setText("Select Student From The Table:");
 		summaryTextPane.setFont(new Font("Candara", Font.BOLD, 24));
