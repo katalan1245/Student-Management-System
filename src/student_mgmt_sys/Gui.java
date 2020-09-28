@@ -162,8 +162,11 @@ public class Gui {
 		exitButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.out.println("GUI>> Exiting...");
-				System.exit(0);
+				int ans = JOptionPane.showConfirmDialog(null, "Are You Sure You Want To Exit?", "Exit", JOptionPane.YES_NO_OPTION);
+				if(ans == JOptionPane.YES_OPTION) {
+					System.out.println("GUI>> Exiting...");
+					System.exit(0);
+				}
 			}
 		});
 		exitButton.setForeground(Color.BLACK);
